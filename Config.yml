@@ -54,11 +54,20 @@ save-corpses: true
 #Can players revive another player?
 revive: true
 
+#Set the max player distance for revive.
+revive-distance: 5
+
 #Title of inventory created when you click for revive. 
 #%player% gets replaced with the player name.
 #Color codes and unicode characters work, but might be glitchy.
 #Minecraft has a 32 character limit on GUI lengths. If your title is more then that you will get a error on the console.
 gui-revive-title: "&7Revive &c%player%"
+
+#First item material in the gui (Default: RED_WOOL). 
+gui-revive-material-red: "RED_WOOL"
+
+#Second item material in the gui (Default: GREEN_WOOL). 
+gui-revive-material-green: "GREEN_WOOL"
 
 #Can players skip spectator mode?
 skip-spec: true
@@ -109,7 +118,7 @@ holo: true
 #HolographicDisplays text. 
 #%seconds% gets replaced with the remaining seconds.
 #Color codes and unicode characters work, but might be glitchy.
-holo-text: "&cShif + Click &7for &6Revive! &7(&c %seconds% &7)"
+holo-text: "&cShift + Click &7for &6Revive! &7(&c %seconds% &7)"
 
 #HolographicDisplays text. 
 #%seconds% gets replaced with the remaining seconds.
@@ -120,4 +129,6 @@ holo-revive-text: "&7Revive in progress! &7(&c %seconds% &7)"
 class-revive: false
 
 #Class Name. 
+#revive-class-name: medic > for only one class.
+#revive-class-name: medic,druid,... > for several classes.
 revive-class-name: "medic"
