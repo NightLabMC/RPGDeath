@@ -115,3 +115,9 @@ holo-text: "&cShif + Click &7for &6Revive! &7(&c %seconds% &7)"
 #%seconds% gets replaced with the remaining seconds.
 #Color codes and unicode characters work, but might be glitchy.
 holo-revive-text: "&7Revive in progress! &7(&c %seconds% &7)"
+
+#Use class revive?
+class-revive: false
+
+#Class Name. 
+revive-class-name: "medic"
