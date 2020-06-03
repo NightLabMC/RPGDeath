@@ -1,4 +1,12 @@
 
+# _____  _____   _____ _____             _   _     
+#|  __ \|  __ \ / ____|  __ \           | | | |    
+#| |__) | |__) | |  __| |  | | ___  __ _| |_| |__  
+#|  _  /|  ___/| | |_ | |  | |/ _ \/ _` | __| '_ \ 
+#| | \ \| |    | |__| | |__| |  __/ (_| | |_| | | |
+#|_|  \_\_|     \_____|_____/ \___|\__,_|\__|_| |_|
+#
+
 #Time in seconds until the corpse despawns. Set to -1 for the copse to never despawn.
 corpse-time: 120
 
@@ -70,7 +78,7 @@ gui-revive-material-red: "RED_WOOL"
 gui-revive-material-green: "GREEN_WOOL"
 
 #Can players skip spectator mode?
-skip-spec: true
+skip-spec: false
 
 #Text of the action bar message when player are in Death Spectating. 
 #Color codes and unicode characters work, but might be glitchy.
@@ -92,7 +100,7 @@ title-text: "&cYou are dead!."
 #subtitle message when player are in Death Spectating. 
 #%seconds% gets replaced with the remaining seconds.
 #Color codes and unicode characters work, but might be glitchy.
-subtitle-text: "&7Reappearance &c%seconds% &7in seconds!"
+subtitle-text: "&7Reappearance in &c%seconds% &7seconds!"
 
 #title message when player are in revive. 
 #Color codes and unicode characters work, but might be glitchy.
@@ -109,8 +117,9 @@ rpg-spawn: true
 #%DeathMessage% gets replaced with the minecraft death message.
 #%killer% gets replaced with the killer player name.
 #%killed% gets replaced with the killed player name.
+#%death_symbol% gets replaced with the death symbol.
 #Color codes and unicode characters work, but might be glitchy.
-custom-death-message: "&7(&c?&7) %DeathMessage%"
+custom-death-message: "&7(&c%death_symbol%&7) %DeathMessage%"
 
 #Use HolographicDisplays?
 holo: true
@@ -132,3 +141,24 @@ class-revive: false
 #revive-class-name: medic > for only one class.
 #revive-class-name: medic,druid,... > for several classes.
 revive-class-name: "medic"
+
+#Use multiply  Time? 
+use-multiply-time: false
+
+#Multiply  Time. 
+#In seconds.
+multiply-time: 2
+
+#Time after playerDeath for reset Multiply Spec Time. 
+#In seconds.
+reset-multiply-time: 20
+
+#Op can Bypass respawn time?. 
+op-bypass: true
+
+#If RPGSpawn disable. 
+#Respawn at player body?
+respawn-at-body: false
+
+#Prevent movement in spectator mode? 
+prevent-movement: false
