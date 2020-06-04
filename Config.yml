@@ -78,7 +78,7 @@ gui-revive-material-red: "RED_WOOL"
 gui-revive-material-green: "GREEN_WOOL"
 
 #Can players skip spectator mode?
-skip-spec: false
+skip-spec: true
 
 #Text of the action bar message when player are in Death Spectating. 
 #Color codes and unicode characters work, but might be glitchy.
@@ -86,6 +86,38 @@ action-bar-skip-text: "&7Press &cShift &7to reincarnate directly."
 
 #Time in seconds until the player can respawn.
 spectator-time: 45
+
+#List of worlds where DeathSpectating should be enabled
+#Set world to 'all' for every world.
+#Use '|' to add multiple worlds.
+world-whitelist: all
+
+#List of commands that a player is allowed to use while DeathSpectating.
+# Players with rpgdeath.commands are not subject to this whitelist.
+command-whitelist:
+- me
+- m
+- msg
+- message
+- t
+- tell
+- w
+- whisper
+- list
+- ?
+- info
+- report
+
+#Printed to player when they try to use a command not on the commandWhitelist.
+chat-message-denied-command: "&cYou are not allowed to use that command while death spectating."
+
+#use Damage BlackList?
+use-damage-cause-blacklist: false
+
+#List of DamageCauses that should NOT put a player into spectating mode on death.
+damage-cause-blacklist:
+- SUFFOCATION
+- SUICIDE
 
 #Chat message when player are in Death Spectating. 
 #%seconds% gets replaced with the spectator time.
@@ -154,11 +186,14 @@ multiply-time: 2
 reset-multiply-time: 20
 
 #Op can Bypass respawn time?. 
-op-bypass: true
+op-bypass: false
 
 #If RPGSpawn disable. 
 #Respawn at player body?
 respawn-at-body: false
 
 #Prevent movement in spectator mode? 
-prevent-movement: false
+prevent-movement: true
+
+#Maximum radius that the player can walk as a spectator
+spectator-radius: 20
