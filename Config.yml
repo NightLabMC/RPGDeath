@@ -6,6 +6,7 @@
 #| | \ \| |    | |__| | |__| |  __/ (_| | |_| | | |
 #|_|  \_\_|     \_____|_____/ \___|\__,_|\__|_| |_|
 #
+RPGDeath: PREMIUM, Thanks for purchasing the plugin!
 
 #Time in seconds until the corpse despawns. Set to -1 for the copse to never despawn.
 corpse-time: 120
@@ -145,13 +146,20 @@ revive-subtitle-text: "&7Revive in progress!"
 #Use rpg spawn?
 rpg-spawn: true
 
-#Broadcasty message when player Die. 
+#Broadcast message when player Die. 
 #%DeathMessage% gets replaced with the minecraft death message.
 #%killer% gets replaced with the killer player name.
 #%killed% gets replaced with the killed player name.
 #%death_symbol% gets replaced with the death symbol.
 #Color codes and unicode characters work, but might be glitchy.
 custom-death-message: "&7(&c%death_symbol%&7) %DeathMessage%"
+
+#Broadcast message when player revive. 
+#%medic% gets replaced with the medic player name.
+#%revived% gets replaced with the revived player name.
+#%death_symbol% gets replaced with the death symbol.
+#Color codes and unicode characters work, but might be glitchy.
+custom-revive-message: "&7(&c%death_symbol%&7) %revived% has just been revive by %medic%"
 
 #Use HolographicDisplays?
 holo: true
@@ -170,9 +178,19 @@ holo-revive-text: "&7Revive in progress! &7(&c %seconds% &7)"
 class-revive: false
 
 #Class Name. 
+#MMOCore support
 #revive-class-name: medic > for only one class.
 #revive-class-name: medic,druid,... > for several classes.
 revive-class-name: "medic"
+
+#Use item revive?
+item-revive: false
+
+#Items Name. 
+#MMOItem support (use item id).
+#revive-item-material: DIAMOND_PICKAXE > for only one item.
+#revive-item-material: DIAMOND_PICKAXE, IRON_PICKAXE, STEEL_PICKAXE, ... > for several items.
+revive-item-material: "DIAMOND_PICKAXE"
 
 #Use multiply  Time? 
 use-multiply-time: false
